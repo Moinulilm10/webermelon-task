@@ -567,3 +567,152 @@
     margin: auto;
   }
 }
+
+#studio-service {
+  padding: 120px 0px;
+  font-family: var(--font-inter);
+}
+
+.studio-title h2 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.studio-title {
+  text-align: center;
+  font-family: var(--font-inter);
+}
+
+.studio-title p {
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 8px;
+  color: #4c4c4c;
+}
+
+.studio-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px 80px;
+  padding-top: 64px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .studio-details {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .studio-title h2 {
+    font-size: 36px;
+  }
+
+  .studio-title p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .studio-title h2 {
+    font-size: 28px;
+  }
+
+  .studio-title p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .servicesarea p {
+    font-size: 20px;
+  }
+
+  .badge-area span {
+    font-size: 12px;
+    padding: 3px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .studio-title h2 {
+    font-size: 24px;
+  }
+
+  .studio-details {
+    gap: 32px;
+  }
+
+  .servicesarea p {
+    font-size: 18px; /* Further reduce font size for smaller mobile screens */
+  }
+
+  .badge-area span {
+    font-size: 11px;
+    padding: 2px 16px;
+  }
+}
+
+.badge-area span {
+  font-size: 14px;
+  background: var(--color-secondary);
+  padding: 3.5px 32px;
+  border-radius: 23px;
+  margin-top: 24px;
+}
+
+.servicesarea img {
+  padding-bottom: 21px;
+}
+
+.servicesarea p {
+  padding-top: 12px;
+  font-size: 24px;
+}
+
+.skills-slider {
+  background-color: var(--color-primary); /* Dark background */
+  padding: 10px 0;
+  overflow: hidden;
+  font-family: var(--font-inter);
+  color: white;
+}
+
+.skills-list {
+  display: flex;
+  animation: slide 20s linear infinite;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.skills-list li::before {
+  content: "●";
+  color: #00d4a5;
+  margin-right: 8px;
+  font-size: 8px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-list li {
+    font-size: 14px;
+    gap: 20px;
+  }
+}
